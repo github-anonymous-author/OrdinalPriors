@@ -6,8 +6,4 @@ This application is made available on the Shiny server in the unblinded version 
 ### To access the app for review purposes, you would need to
  1. install [R](https://cran.r-project.org/)
  2. use the following command to install the necessary packages:  `install. packages(c("shiny", "shinyjs", "V8", "ggplot2", "cowplot", "ggpubr", "MASS", "mvtnorm", "bde"))`
- 3. run the code below.
-    
-```
-shiny::runGitHub('github-anonymous-author/OrdinalPriors')
-```
+ 3. run this prompt: `shiny::runGitHub('github-anonymous-author/OrdinalPriors')`
