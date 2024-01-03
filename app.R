@@ -66,8 +66,9 @@ ui <- fluidPage(
   #            ".shiny-output-error:before { visibility: hidden; }"
   # ),
   shinyjs::useShinyjs(),
-  shinyjs::extendShinyjs(text = "shinyjs.refresh = function() { location.reload(); }",
-                         functions = c("refresh")),
+  # shinyjs::extendShinyjs(text = "shinyjs.refresh = function() { location.reload(); }",
+  #                        functions = c("refresh")),
+  # shinyjs::extendShinyjs(text = "shinyjs.refresh = function() { location.reload(); }"),
   
   sidebarLayout(
     sidebarPanel(width=3, 
@@ -369,8 +370,12 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
+  # observeEvent(input$reset, {
+  #   shinyjs::js$refresh()
+  # })
+  
   observeEvent(input$reset, {
-    shinyjs::js$refresh()
+    refresh()
   })
   
   output$userGuide <- downloadHandler(
